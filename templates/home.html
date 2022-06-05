@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+    <h1>Hello FastAPI!</h1>
+    <img src="static/img/fastapi_logo.png" alt="FastAPI">
+    <a href="/api/motd">Message Of The Day API</a>
+    <p>SECRET:{{ display_secret }}</p>
+
+    {% for i in images %}
+        <li>{{ i.slug }}</li>
+    {% endfor %}
+
+{% endblock %}
